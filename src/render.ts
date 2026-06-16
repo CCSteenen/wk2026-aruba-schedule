@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import type { Match } from './types.js';
+export async function loadMatches(dataDir:string): Promise<Match[]> { return JSON.parse(await fs.readFile(path.join(dataDir,'matches.json'),'utf8')); }
+const esc=(s:string)=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]!));
+export function renderSvg(matches: Match[]) {
+  const W=4961,H=3508; const groups='ABCDEFGHIJKL'.split('');
+  const groupCards = groups.map((g,i)=>{ const x=80+(i%4)*760, y=260+Math.floor(i/4)*560; const ms=matches.filter(m=>m.group===g);
+    return `<g><rect x="${x}" y="${y}" width="720" height="520" rx="24" fill="#fff" stroke="#134e4a"/><text x="${x+24}" y="${y+48}" class="h2">Group ${g}</text>${ms.map((m,j)=>`<text x="${x+24}" y="${y+92+j*64}" class="row">M${m.matchNo} ${esc(m.dateAst)} ${m.displayTime} ${esc(m.team1Code??'')} v ${esc(m.team2Code??'')} ${m.score?esc(m.score):''}</text><text x="${x+24}" y="${y+118+j*64}" class="sub">${esc(m.venue)}, ${esc(m.city)}</text>`).join('')}</g>`; }).join('');
+  const ko = matches.filter(m=>m.matchNo>=73).map((m,i)=>{ const col = m.matchNo<89?0:m.matchNo<97?1:m.matchNo<101?2:m.matchNo<103?3:4; const idx = [73,89,97,101,103].map((s,ci)=>ci===col?m.matchNo-s:0)[col]; const x=3220+col*330, y=330+idx*(col===0?150:260);
+    return `<g><rect x="${x}" y="${y}" width="290" height="110" rx="14" fill="#f8fafc" stroke="#334155"/><text x="${x+14}" y="${y+30}" class="match">M${m.matchNo} ${esc(m.stage)}</text><text x="${x+14}" y="${y+58}" class="tiny">${esc(m.dateAst)} ${m.displayTime}</text><text x="${x+14}" y="${y+86}" class="tiny">${esc(m.slot1??'TBD')} vs ${esc(m.slot2??'TBD')}</text></g>`; }).join('');
+  return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><style>.title{font:700 92px Arial;fill:#0f172a}.h2{font:700 34px Arial;fill:#134e4a}.row{font:24px Arial;fill:#111827}.sub,.tiny{font:20px Arial;fill:#475569}.match{font:700 20px Arial;fill:#0f172a}.legend{font:28px Arial;fill:#1e293b}</style><rect width="100%" height="100%" fill="#ecfeff"/><text x="80" y="135" class="title">World Cup 2026 Schedule - Aruba Time</text><text x="80" y="195" class="legend">Legend: AST = Atlantic Standard Time (UTC-4); 1A/2A = group finish; 3A* = possible third-place qualifier; W = winner; L = loser. Times use 24-hour AST.</text>${groupCards}<text x="3220" y="270" class="h2">Knockout bracket</text>${ko}<text x="80" y="3430" class="sub">Generated from structured JSON data. No official FIFA logos included.</text></svg>`;
+}
