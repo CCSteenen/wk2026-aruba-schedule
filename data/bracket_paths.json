@@ -1,0 +1,258 @@
+[
+  {
+    "matchNo": 73,
+    "stage": "Round of 32",
+    "slot1": "2A",
+    "slot2": "2B",
+    "feedsTo": 90,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 74,
+    "stage": "Round of 32",
+    "slot1": "1E",
+    "slot2": "3A/B/C/D/F",
+    "feedsTo": 89,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 75,
+    "stage": "Round of 32",
+    "slot1": "1F",
+    "slot2": "2C",
+    "feedsTo": 90,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 76,
+    "stage": "Round of 32",
+    "slot1": "1C",
+    "slot2": "2F",
+    "feedsTo": 91,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 77,
+    "stage": "Round of 32",
+    "slot1": "1I",
+    "slot2": "3C/D/F/G/H",
+    "feedsTo": 89,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 78,
+    "stage": "Round of 32",
+    "slot1": "2E",
+    "slot2": "2I",
+    "feedsTo": 91,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 79,
+    "stage": "Round of 32",
+    "slot1": "1A",
+    "slot2": "3C/E/F/H/I",
+    "feedsTo": 92,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 80,
+    "stage": "Round of 32",
+    "slot1": "1L",
+    "slot2": "3E/H/I/J/K",
+    "feedsTo": 92,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 81,
+    "stage": "Round of 32",
+    "slot1": "1D",
+    "slot2": "3B/E/F/I/J",
+    "feedsTo": 94,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 82,
+    "stage": "Round of 32",
+    "slot1": "1G",
+    "slot2": "3A/E/H/I/J",
+    "feedsTo": 94,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 83,
+    "stage": "Round of 32",
+    "slot1": "2K",
+    "slot2": "2L",
+    "feedsTo": 93,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 84,
+    "stage": "Round of 32",
+    "slot1": "1H",
+    "slot2": "2J",
+    "feedsTo": 93,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 85,
+    "stage": "Round of 32",
+    "slot1": "1B",
+    "slot2": "3E/F/G/I/J",
+    "feedsTo": 96,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 86,
+    "stage": "Round of 32",
+    "slot1": "1J",
+    "slot2": "2H",
+    "feedsTo": 95,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 87,
+    "stage": "Round of 32",
+    "slot1": "1K",
+    "slot2": "3D/E/I/J/L",
+    "feedsTo": 96,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 88,
+    "stage": "Round of 32",
+    "slot1": "2D",
+    "slot2": "2G",
+    "feedsTo": 95,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 89,
+    "stage": "Round of 16",
+    "slot1": "W74",
+    "slot2": "W77",
+    "feedsTo": 97,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 90,
+    "stage": "Round of 16",
+    "slot1": "W73",
+    "slot2": "W75",
+    "feedsTo": 97,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 91,
+    "stage": "Round of 16",
+    "slot1": "W76",
+    "slot2": "W78",
+    "feedsTo": 99,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 92,
+    "stage": "Round of 16",
+    "slot1": "W79",
+    "slot2": "W80",
+    "feedsTo": 99,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 93,
+    "stage": "Round of 16",
+    "slot1": "W83",
+    "slot2": "W84",
+    "feedsTo": 98,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 94,
+    "stage": "Round of 16",
+    "slot1": "W81",
+    "slot2": "W82",
+    "feedsTo": 98,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 95,
+    "stage": "Round of 16",
+    "slot1": "W86",
+    "slot2": "W88",
+    "feedsTo": 100,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 96,
+    "stage": "Round of 16",
+    "slot1": "W85",
+    "slot2": "W87",
+    "feedsTo": 100,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 97,
+    "stage": "Quarter-final",
+    "slot1": "W89",
+    "slot2": "W90",
+    "feedsTo": 101,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 98,
+    "stage": "Quarter-final",
+    "slot1": "W93",
+    "slot2": "W94",
+    "feedsTo": 101,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 99,
+    "stage": "Quarter-final",
+    "slot1": "W91",
+    "slot2": "W92",
+    "feedsTo": 102,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 100,
+    "stage": "Quarter-final",
+    "slot1": "W95",
+    "slot2": "W96",
+    "feedsTo": 102,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 101,
+    "stage": "Semi-final",
+    "slot1": "W97",
+    "slot2": "W98",
+    "feedsTo": 104,
+    "loserFeedsTo": 103
+  },
+  {
+    "matchNo": 102,
+    "stage": "Semi-final",
+    "slot1": "W99",
+    "slot2": "W100",
+    "feedsTo": 104,
+    "loserFeedsTo": 103
+  },
+  {
+    "matchNo": 103,
+    "stage": "Bronze Final",
+    "slot1": "L101",
+    "slot2": "L102",
+    "feedsTo": null,
+    "loserFeedsTo": null
+  },
+  {
+    "matchNo": 104,
+    "stage": "Final",
+    "slot1": "W101",
+    "slot2": "W102",
+    "feedsTo": null,
+    "loserFeedsTo": null
+  }
+]

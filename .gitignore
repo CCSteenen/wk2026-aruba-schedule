@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+outputs/
+playwright-report/
+test-results/
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+.DS_Store
+npm-debug.log*

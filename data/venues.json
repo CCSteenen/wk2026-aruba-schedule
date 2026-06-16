@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Atlanta Stadium",
+    "city": "Atlanta",
+    "matchNos": [
+      14,
+      25,
+      38,
+      50,
+      72,
+      80,
+      95,
+      102
+    ]
+  },
+  {
+    "name": "BC Place Vancouver",
+    "city": "Vancouver",
+    "matchNos": [
+      6,
+      27,
+      40,
+      51,
+      64,
+      85,
+      96
+    ]
+  },
+  {
+    "name": "Boston Stadium",
+    "city": "Boston",
+    "matchNos": [
+      5,
+      18,
+      30,
+      45,
+      61,
+      74,
+      97
+    ]
+  },
+  {
+    "name": "Dallas Stadium",
+    "city": "Dallas",
+    "matchNos": [
+      11,
+      22,
+      43,
+      57,
+      70,
+      78,
+      88,
+      93,
+      101
+    ]
+  },
+  {
+    "name": "Estadio Guadalajara",
+    "city": "Guadalajara",
+    "matchNos": [
+      2,
+      28,
+      48,
+      66
+    ]
+  },
+  {
+    "name": "Estadio Monterrey",
+    "city": "Monterrey",
+    "matchNos": [
+      12,
+      36,
+      54,
+      75
+    ]
+  },
+  {
+    "name": "Houston Stadium",
+    "city": "Houston",
+    "matchNos": [
+      10,
+      23,
+      35,
+      47,
+      65,
+      76,
+      90
+    ]
+  },
+  {
+    "name": "Kansas City Stadium",
+    "city": "Kansas City",
+    "matchNos": [
+      19,
+      34,
+      58,
+      69,
+      87,
+      100
+    ]
+  },
+  {
+    "name": "Los Angeles Stadium",
+    "city": "Los Angeles",
+    "matchNos": [
+      4,
+      15,
+      26,
+      39,
+      59,
+      73,
+      84,
+      98
+    ]
+  },
+  {
+    "name": "Mexico City Stadium",
+    "city": "Mexico City",
+    "matchNos": [
+      1,
+      24,
+      53,
+      79,
+      92
+    ]
+  },
+  {
+    "name": "Miami Stadium",
+    "city": "Miami",
+    "matchNos": [
+      13,
+      37,
+      49,
+      71,
+      86,
+      99,
+      103
+    ]
+  },
+  {
+    "name": "New York New Jersey Stadium",
+    "city": "New York New Jersey",
+    "matchNos": [
+      7,
+      17,
+      41,
+      56,
+      67,
+      77,
+      91,
+      104
+    ]
+  },
+  {
+    "name": "Philadelphia Stadium",
+    "city": "Philadelphia",
+    "matchNos": [
+      9,
+      29,
+      42,
+      55,
+      68,
+      89
+    ]
+  },
+  {
+    "name": "San Francisco Bay Area Stadium",
+    "city": "San Francisco Bay Area",
+    "matchNos": [
+      8,
+      20,
+      31,
+      44,
+      60,
+      81
+    ]
+  },
+  {
+    "name": "Seattle Stadium",
+    "city": "Seattle",
+    "matchNos": [
+      16,
+      32,
+      52,
+      63,
+      82,
+      94
+    ]
+  },
+  {
+    "name": "Toronto Stadium",
+    "city": "Toronto",
+    "matchNos": [
+      3,
+      21,
+      33,
+      46,
+      62,
+      83
+    ]
+  }
+]

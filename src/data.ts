@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import type { BracketPath, Match, Team, Venue } from './types.js';
+const val = (v: unknown) => String(v ?? '').trim();
+const nullable = (v: unknown) => { const s = val(v); return s ? s : null; };
+export async function readSourceCsv(file: string): Promise<Record<string,string>[]> { return parseCsv(await fs.readFile(file, 'utf8')); }
+function parseCsv(raw:string) { const rows:string[][]=[]; let row:string[]=[]; let cell=''; let q=false; for(let i=0;i<raw.length;i++){ const c=raw[i]; if(q){ if(c==='"' && raw[i+1]==='"'){cell+='"'; i++;} else if(c==='"') q=false; else cell+=c; } else if(c==='"') q=true; else if(c===','){row.push(cell); cell='';} else if(c==='\n'){row.push(cell); rows.push(row); row=[]; cell='';} else if(c!=='\r') cell+=c; } if(cell||row.length){row.push(cell); rows.push(row);} const [h,...body]=rows; return body.filter(r=>r.some(Boolean)).map(r=>Object.fromEntries(h.map((k,i)=>[k,r[i]??'']))); }
+export function normalizeRows(rows: Record<string,string>[]) {
+  const matches: Match[] = rows.map((r) => ({ matchNo: Number(r.match_no), stage: val(r.stage), group: nullable(r.group), dateAst: val(r.date_ast), kickoffAst: val(r.kickoff_ast), displayTime: `${val(r.kickoff_ast)} AST`, team1Code: nullable(r.team_1_code), team1Name: nullable(r.team_1_name), team2Code: nullable(r.team_2_code), team2Name: nullable(r.team_2_name), venue: val(r.venue), city: val(r.city), slot1: nullable(r.slot_1), slot2: nullable(r.slot_2), status: val(r.status) as Match['status'], score: nullable(r.score), sourceVersion: val(r.source_version) })).sort((a,b)=>a.matchNo-b.matchNo);
+  const teamMap = new Map<string, Team>(); for (const m of matches.filter(m => m.stage === 'Group Stage')) { if (m.team1Code && m.team1Name && m.group) teamMap.set(m.team1Code, { code:m.team1Code, name:m.team1Name, group:m.group }); if (m.team2Code && m.team2Name && m.group) teamMap.set(m.team2Code, { code:m.team2Code, name:m.team2Name, group:m.group }); }
+  const venueMap = new Map<string, Venue>(); for (const m of matches) { const existing = venueMap.get(m.venue) ?? { name:m.venue, city:m.city, matchNos:[] }; existing.matchNos.push(m.matchNo); venueMap.set(m.venue, existing); }
+  const bracketPaths: BracketPath[] = matches.filter(m => m.matchNo >= 73).map(m => ({ matchNo:m.matchNo, stage:m.stage, slot1:m.slot1 ?? '', slot2:m.slot2 ?? '', feedsTo: findFeed(m.matchNo, matches, 'W'), loserFeedsTo: findFeed(m.matchNo, matches, 'L') }));
+  return { matches, teams:[...teamMap.values()].sort((a,b)=>a.group.localeCompare(b.group)||a.code.localeCompare(b.code)), venues:[...venueMap.values()].sort((a,b)=>a.name.localeCompare(b.name)), bracketPaths };
+}
+function findFeed(no:number, matches: Match[], prefix:'W'|'L') { return matches.find(m => m.slot1 === `${prefix}${no}` || m.slot2 === `${prefix}${no}`)?.matchNo ?? null; }
