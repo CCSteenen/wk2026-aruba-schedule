@@ -23,10 +23,11 @@ test('render is data-driven and includes required labels', async () => {
   }
 });
 
-test('render script no longer contains blank fallback exporters', async () => {
+test('render script no longer contains blank placeholder exporters', async () => {
   const script = String(await fs.readFile('scripts/render-all.ts', 'utf8'));
-  assert.ok(!script.includes('function makePng'), 'blank makePng fallback must not return');
-  assert.ok(!script.includes('function makePdf'), 'title-only makePdf fallback must not return');
-  assert.match(script, /exportWithPlaywright/);
+  assert.ok(!script.includes('function makePng'), 'blank makePng placeholder exporter must not return');
+  assert.ok(!script.includes('function makePdf'), 'title-only makePdf placeholder exporter must not return');
+  assert.match(script, /rasterizeStaticPoster/);
   assert.match(script, /runVisualQa/);
+  assert.match(script, /wk2026_aruba_master_overview/);
 });
