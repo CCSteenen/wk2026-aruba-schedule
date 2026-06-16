@@ -1,6 +1,6 @@
-# WK 2026 Aruba Schedule
+# WK 2026 Aruba (AST) Schedule
 
-A TypeScript foundation for generating a data-driven World Cup 2026 schedule in Aruba time.
+A TypeScript foundation for generating a data-driven World Cup 2026 schedule in Atlantic Standard Time (AST).
 
 The generator reads `inputs/world_cup_2026_master_schedule_aruba_time_data.csv`, normalizes it into structured files in `data/`, validates schedule rules, and renders publication assets in `outputs/`.
 
@@ -28,11 +28,10 @@ npm run build
 
 ## Visual outputs
 
-- `outputs/wk2026_aruba_master_overview.html` is the standalone browser-rendered master poster.
-- `outputs/wk2026_aruba_master_overview.svg` is the main editable vector render.
-- `outputs/wk2026_aruba_master_overview_3840x2160.png` is a TV/social raster export created by the render pipeline.
-- `outputs/wk2026_aruba_master_overview.pdf` is a print/review export created from the schedule page.
-- `outputs/qa_report.html` summarizes visual QA and fails blank/near-blank renders.
+- `outputs/master_a0.svg` is the main editable vector render.
+- `outputs/master_tv_3840x2160.png` is a TV/social raster export.
+- `outputs/master_a0.pdf` is a print/review export.
+- `outputs/qa_report.html` summarizes render QA.
 
 ## Future work
 
