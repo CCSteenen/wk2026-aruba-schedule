@@ -1,6 +1,6 @@
-# WK 2026 Aruba Schedule
+# WK 2026 Aruba (AST) Schedule
 
-A TypeScript foundation for generating a data-driven World Cup 2026 schedule in Aruba time.
+A TypeScript foundation for generating a data-driven World Cup 2026 schedule in Atlantic Standard Time (AST).
 
 The generator reads `inputs/world_cup_2026_master_schedule_aruba_time_data.csv`, normalizes it into structured files in `data/`, validates schedule rules, and renders publication assets in `outputs/`.
 
