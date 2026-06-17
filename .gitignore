@@ -1,7 +1,7 @@
 node_modules/
 dist/
-build/
 outputs/
+output/
 playwright-report/
 test-results/
 *.zip
@@ -11,4 +11,4 @@ test-results/
 *.webp
 *.pdf
 .DS_Store
-npm-debug.log*
+.env

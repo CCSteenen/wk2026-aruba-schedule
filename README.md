@@ -1,38 +1,38 @@
-# WK 2026 Aruba (AST) Schedule
+# WK 2026 Aruba Schedule Web App Starter
 
-A TypeScript foundation for generating a data-driven World Cup 2026 schedule in Atlantic Standard Time (AST).
+This is a fresh starting point for a Codex-built web application for the World Cup 2026 schedule in Aruba time.
 
-The generator reads `inputs/world_cup_2026_master_schedule_aruba_time_data.csv`, normalizes it into structured files in `data/`, validates schedule rules, and renders publication assets in `outputs/`.
+The package starts from the successful approved visual direction: a dark sports-broadcast overview with group cards, a knockout bracket, AST / UTC-4 labeling, match numbers, and a footer legend.
 
-## Aruba time
+## What this repo does now
 
-All displayed match times use Atlantic Standard Time (AST, UTC-4) in 24-hour format, for example `15:00 AST`.
+- Runs a Vite + React + TypeScript web app.
+- Loads all 104 matches from structured JSON data.
+- Shows a master overview with Groups A-L and the knockout bracket.
+- Provides group, knockout, match-list, and export-center views.
+- Includes search and filters.
+- Includes a match detail modal.
+- Includes a validated data model.
+- Includes the approved SVG visual reference.
+- Includes the successful Python renderer as a reference implementation.
 
-## Commands
+## One-command local start
 
 ```bash
-npm install
-npm run validate:data
-npm run test
-npm run render:all
-npm run build
+npm install && npm run dev
 ```
 
-## Data outputs
+Then open the local URL shown by Vite.
 
-- `data/matches.json` and `data/matches.csv` contain normalized matches.
-- `data/teams.json` contains group-stage teams.
-- `data/venues.json` contains venues and hosted match numbers.
-- `data/bracket_paths.json` captures knockout placeholders and winner/loser feeds.
-- `data/source_log.json` records source provenance.
+## Codex workflow
 
-## Visual outputs
+Use Codex Cloud to work phase by phase. Start with:
 
-- `outputs/master_a0.svg` is the main editable vector render.
-- `outputs/master_tv_3840x2160.png` is a TV/social raster export.
-- `outputs/master_a0.pdf` is a print/review export.
-- `outputs/qa_report.html` summarizes render QA.
+```text
+Read README.md, AGENTS.md, docs/codex/PHASE_1_PROMPT.md, and reference/approved_reference.svg.
+Then execute only Phase 1.
+```
 
-## Future work
+## Core rule
 
-Future agents should improve the visual design, add richer QA checks, and update confirmed results through structured data normalization instead of manually editing generated SVG/PNG/PDF files.
+The approved visual quality is the baseline. Technical scaffolding is only useful when it preserves the schedule design.

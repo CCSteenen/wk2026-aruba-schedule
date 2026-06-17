@@ -1,1 +1,24 @@
-{"name":"wk2026-aruba-schedule","version":"0.1.0","private":true,"type":"module","scripts":{"build":"tsc -p tsconfig.json","normalize:data":"npm run build && node dist/scripts/normalize-data.js","validate:data":"npm run build && node dist/scripts/normalize-data.js && node dist/scripts/validate-data.js","render:all":"npm run build && node dist/scripts/render-all.js","test":"npm run build && node --test dist/tests/*.test.js"},"dependencies":{},"devDependencies":{}}
+{
+  "name": "wk2026-aruba-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "validate:data": "node scripts/validate-data.mjs",
+    "test": "node scripts/validate-data.mjs",
+    "codex:check": "npm run validate:data && npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0",
+    "typescript": "^5.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  },
+  "devDependencies": {}
+}
