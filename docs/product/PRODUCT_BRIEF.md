@@ -1,26 +1,12 @@
 # Product Brief
 
-The end product is a public-facing, data-driven WK 2026 Aruba Schedule web application.
+The product is a data-driven web application for viewing the World Cup 2026 schedule in Aruba time.
 
-## Value
-
-Users should be able to browse the World Cup 2026 schedule in Aruba time, understand the tournament hierarchy, filter matches, inspect match details, and eventually export high-quality schedule assets.
-
-## MVP
-
+Core value:
 - master overview
-- group stage view
-- knockout view
-- all matches view
+- groups
+- knockout bracket
 - search and filters
 - match detail modal
-- export center placeholder
-- data validation
-- approved visual reference
-
-## Later
-
-- export from `/poster`
-- manual update workflow
-- official source adapter
-- hosted public site
+- future export center
+- safe data updates

@@ -1,38 +1,53 @@
-# WK 2026 Aruba Schedule Web App Starter
+# WK 2026 Aruba Schedule Web App
 
-This is a fresh starting point for a Codex-built web application for the World Cup 2026 schedule in Aruba time.
+Fresh zero-dependency starter for a Codex-built World Cup 2026 schedule web app in Aruba time.
 
-The package starts from the successful approved visual direction: a dark sports-broadcast overview with group cards, a knockout bracket, AST / UTC-4 labeling, match numbers, and a footer legend.
+## Why zero dependency
 
-## What this repo does now
+Codex returned 403 errors when trying to install React, Vite, and type packages. This starter avoids npm registry dependency problems completely. It uses plain browser JavaScript, CSS, JSON data, and Node built-ins for validation/build scripts.
 
-- Runs a Vite + React + TypeScript web app.
-- Loads all 104 matches from structured JSON data.
-- Shows a master overview with Groups A-L and the knockout bracket.
-- Provides group, knockout, match-list, and export-center views.
-- Includes search and filters.
-- Includes a match detail modal.
-- Includes a validated data model.
-- Includes the approved SVG visual reference.
-- Includes the successful Python renderer as a reference implementation.
-
-## One-command local start
+## One-command check
 
 ```bash
-npm install && npm run dev
+npm run codex:check
 ```
 
-Then open the local URL shown by Vite.
+## Local preview
 
-## Codex workflow
+```bash
+npm run dev
+```
 
-Use Codex Cloud to work phase by phase. Start with:
+Then open:
+
+```text
+http://localhost:5173
+```
+
+## What is included
+
+- all 104 matches in `data/matches.json`
+- group stage view
+- knockout view
+- all-matches search/filter view
+- match detail modal
+- poster view
+- export-center placeholder
+- approved visual reference in `reference/`
+- successful Python renderer as reference implementation
+
+## Codex next step
+
+Paste this into Codex:
 
 ```text
 Read README.md, AGENTS.md, docs/codex/PHASE_1_PROMPT.md, and reference/approved_reference.svg.
-Then execute only Phase 1.
+
+Execute only Phase 1.
+
+Run:
+npm run codex:check
+
+Fix only concrete validation or build errors.
+Stop after Phase 1 and report the result.
 ```
-
-## Core rule
-
-The approved visual quality is the baseline. Technical scaffolding is only useful when it preserves the schedule design.

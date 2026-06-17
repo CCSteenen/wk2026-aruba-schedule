@@ -1,0 +1,202 @@
+[
+  {
+    "venue": "Mexico City Stadium",
+    "city": "Mexico City",
+    "matches": [
+      1,
+      24,
+      53,
+      79,
+      92
+    ]
+  },
+  {
+    "venue": "Estadio Guadalajara",
+    "city": "Guadalajara",
+    "matches": [
+      2,
+      28,
+      48,
+      66
+    ]
+  },
+  {
+    "venue": "Toronto Stadium",
+    "city": "Toronto",
+    "matches": [
+      3,
+      21,
+      33,
+      46,
+      62,
+      83
+    ]
+  },
+  {
+    "venue": "Los Angeles Stadium",
+    "city": "Los Angeles",
+    "matches": [
+      4,
+      15,
+      26,
+      39,
+      59,
+      73,
+      84,
+      98
+    ]
+  },
+  {
+    "venue": "Boston Stadium",
+    "city": "Boston",
+    "matches": [
+      5,
+      18,
+      30,
+      45,
+      61,
+      74,
+      97
+    ]
+  },
+  {
+    "venue": "BC Place Vancouver",
+    "city": "Vancouver",
+    "matches": [
+      6,
+      27,
+      40,
+      51,
+      64,
+      85,
+      96
+    ]
+  },
+  {
+    "venue": "New York New Jersey Stadium",
+    "city": "New York New Jersey",
+    "matches": [
+      7,
+      17,
+      41,
+      56,
+      67,
+      77,
+      91,
+      104
+    ]
+  },
+  {
+    "venue": "San Francisco Bay Area Stadium",
+    "city": "San Francisco Bay Area",
+    "matches": [
+      8,
+      20,
+      31,
+      44,
+      60,
+      81
+    ]
+  },
+  {
+    "venue": "Philadelphia Stadium",
+    "city": "Philadelphia",
+    "matches": [
+      9,
+      29,
+      42,
+      55,
+      68,
+      89
+    ]
+  },
+  {
+    "venue": "Houston Stadium",
+    "city": "Houston",
+    "matches": [
+      10,
+      23,
+      35,
+      47,
+      65,
+      76,
+      90
+    ]
+  },
+  {
+    "venue": "Dallas Stadium",
+    "city": "Dallas",
+    "matches": [
+      11,
+      22,
+      43,
+      57,
+      70,
+      78,
+      88,
+      93,
+      101
+    ]
+  },
+  {
+    "venue": "Estadio Monterrey",
+    "city": "Monterrey",
+    "matches": [
+      12,
+      36,
+      54,
+      75
+    ]
+  },
+  {
+    "venue": "Miami Stadium",
+    "city": "Miami",
+    "matches": [
+      13,
+      37,
+      49,
+      71,
+      86,
+      99,
+      103
+    ]
+  },
+  {
+    "venue": "Atlanta Stadium",
+    "city": "Atlanta",
+    "matches": [
+      14,
+      25,
+      38,
+      50,
+      72,
+      80,
+      95,
+      102
+    ]
+  },
+  {
+    "venue": "Seattle Stadium",
+    "city": "Seattle",
+    "matches": [
+      16,
+      32,
+      52,
+      63,
+      82,
+      94
+    ]
+  },
+  {
+    "venue": "Kansas City Stadium",
+    "city": "Kansas City",
+    "matches": [
+      19,
+      34,
+      58,
+      69,
+      87,
+      100
+    ]
+  }
+]

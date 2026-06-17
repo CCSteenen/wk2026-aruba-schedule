@@ -2,38 +2,31 @@
 
 ## Prime directive
 
-Build the WK 2026 Aruba Schedule as a polished data-driven web application. Preserve the approved dark sports-broadcast visual style from `reference/approved_reference.svg`.
+Build a polished WK 2026 Aruba Schedule web application from structured data. Preserve the approved dark sports-broadcast visual style from `reference/approved_reference.svg`.
 
 ## Operating model
 
-Work in small phases. Stop after each major phase and ask for review. Provide exact commands run, files changed, and known limitations.
+Work phase by phase and stop after each phase for review.
 
-## Quality requirements
+## Dependency policy
 
-- all 104 matches must come from data files
-- AST / UTC-4 must be visible wherever match times appear
-- the master overview must show Groups A-L and knockout matches M73-M104
-- no blank visual output
-- no title-only export
-- generated files belong in `outputs/` or `output/`
-- do not commit generated PNG, PDF, zip, screenshots, `dist`, or `node_modules`
+This starter is deliberately zero-dependency. Keep it that way until the user approves adding a dependency.
 
 ## Required checks
 
-Run these before reporting success:
-
 ```bash
-npm run validate:data
-npm run build
+npm run codex:check
 ```
 
-If a phase touches data selectors or validation, also run:
+## Quality rules
 
-```bash
-npm run test
-```
+- all 104 matches come from data files
+- AST / UTC-4 stays visible
+- Groups A-L remain visible
+- knockout matches M73-M104 remain visible
+- do not commit generated `dist`, `outputs`, PNG, PDF, zip, screenshots, or node_modules
 
-## PR or task summary format
+## Report format
 
 ```text
 Summary
@@ -45,6 +38,6 @@ Testing
 Visual review
 - ...
 
-Next recommended phase
+Next recommendation
 - ...
 ```

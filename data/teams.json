@@ -1,0 +1,194 @@
+[
+  {
+    "code": "ALG",
+    "name": "Algeria"
+  },
+  {
+    "code": "ARG",
+    "name": "Argentina"
+  },
+  {
+    "code": "AUS",
+    "name": "Australia"
+  },
+  {
+    "code": "AUT",
+    "name": "Austria"
+  },
+  {
+    "code": "BEL",
+    "name": "Belgium"
+  },
+  {
+    "code": "BIH",
+    "name": "Bosnia & Herzegovina"
+  },
+  {
+    "code": "BRA",
+    "name": "Brazil"
+  },
+  {
+    "code": "CAN",
+    "name": "Canada"
+  },
+  {
+    "code": "CIV",
+    "name": "Côte d'Ivoire"
+  },
+  {
+    "code": "COD",
+    "name": "Congo DR"
+  },
+  {
+    "code": "COL",
+    "name": "Colombia"
+  },
+  {
+    "code": "CPV",
+    "name": "Cabo Verde"
+  },
+  {
+    "code": "CRO",
+    "name": "Croatia"
+  },
+  {
+    "code": "CUW",
+    "name": "Curaçao"
+  },
+  {
+    "code": "CZE",
+    "name": "Czechia"
+  },
+  {
+    "code": "ECU",
+    "name": "Ecuador"
+  },
+  {
+    "code": "EGY",
+    "name": "Egypt"
+  },
+  {
+    "code": "ENG",
+    "name": "England"
+  },
+  {
+    "code": "ESP",
+    "name": "Spain"
+  },
+  {
+    "code": "FRA",
+    "name": "France"
+  },
+  {
+    "code": "GER",
+    "name": "Germany"
+  },
+  {
+    "code": "GHA",
+    "name": "Ghana"
+  },
+  {
+    "code": "HAI",
+    "name": "Haiti"
+  },
+  {
+    "code": "IRN",
+    "name": "IR Iran"
+  },
+  {
+    "code": "IRQ",
+    "name": "Iraq"
+  },
+  {
+    "code": "JOR",
+    "name": "Jordan"
+  },
+  {
+    "code": "JPN",
+    "name": "Japan"
+  },
+  {
+    "code": "KOR",
+    "name": "Korea Republic"
+  },
+  {
+    "code": "KSA",
+    "name": "Saudi Arabia"
+  },
+  {
+    "code": "MAR",
+    "name": "Morocco"
+  },
+  {
+    "code": "MEX",
+    "name": "Mexico"
+  },
+  {
+    "code": "NED",
+    "name": "Netherlands"
+  },
+  {
+    "code": "NOR",
+    "name": "Norway"
+  },
+  {
+    "code": "NZL",
+    "name": "New Zealand"
+  },
+  {
+    "code": "PAN",
+    "name": "Panama"
+  },
+  {
+    "code": "PAR",
+    "name": "Paraguay"
+  },
+  {
+    "code": "POR",
+    "name": "Portugal"
+  },
+  {
+    "code": "QAT",
+    "name": "Qatar"
+  },
+  {
+    "code": "RSA",
+    "name": "South Africa"
+  },
+  {
+    "code": "SCO",
+    "name": "Scotland"
+  },
+  {
+    "code": "SEN",
+    "name": "Senegal"
+  },
+  {
+    "code": "SUI",
+    "name": "Switzerland"
+  },
+  {
+    "code": "SWE",
+    "name": "Sweden"
+  },
+  {
+    "code": "TUN",
+    "name": "Tunisia"
+  },
+  {
+    "code": "TUR",
+    "name": "Türkiye"
+  },
+  {
+    "code": "URU",
+    "name": "Uruguay"
+  },
+  {
+    "code": "USA",
+    "name": "United States"
+  },
+  {
+    "code": "UZB",
+    "name": "Uzbekistan"
+  }
+]
