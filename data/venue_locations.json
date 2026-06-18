@@ -1,0 +1,130 @@
+[
+  {
+    "venue": "Atlanta Stadium",
+    "city": "Atlanta",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "BC Place Vancouver",
+    "city": "Vancouver",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Boston Stadium",
+    "city": "Boston",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Dallas Stadium",
+    "city": "Dallas",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Estadio Guadalajara",
+    "city": "Guadalajara",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Estadio Monterrey",
+    "city": "Monterrey",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Houston Stadium",
+    "city": "Houston",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Kansas City Stadium",
+    "city": "Kansas City",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Los Angeles Stadium",
+    "city": "Los Angeles",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Mexico City Stadium",
+    "city": "Mexico City",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Miami Stadium",
+    "city": "Miami",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "New York New Jersey Stadium",
+    "city": "New York New Jersey",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Philadelphia Stadium",
+    "city": "Philadelphia",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "San Francisco Bay Area Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Seattle Stadium",
+    "city": "Seattle",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  },
+  {
+    "venue": "Toronto Stadium",
+    "city": "Toronto",
+    "country": "",
+    "latitude": null,
+    "longitude": null,
+    "map_ready": false
+  }
+]

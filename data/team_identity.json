@@ -1,0 +1,768 @@
+[
+  {
+    "code": "ALG",
+    "name": "Algeria",
+    "group": "J",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ed4fa3",
+        "#f8fafc",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "ARG",
+    "name": "Argentina",
+    "group": "J",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#56a6ff",
+        "#18c4a3",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "AUS",
+    "name": "Australia",
+    "group": "D",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ff8a3d",
+        "#56a6ff",
+        "#47d7bd"
+      ]
+    }
+  },
+  {
+    "code": "AUT",
+    "name": "Austria",
+    "group": "J",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ff8a3d",
+        "#d81b60",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "BEL",
+    "name": "Belgium",
+    "group": "G",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#8f7cff",
+        "#ffca4f"
+      ]
+    }
+  },
+  {
+    "code": "BIH",
+    "name": "Bosnia & Herzegovina",
+    "group": "B",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#18c4a3",
+        "#f8fafc"
+      ]
+    }
+  },
+  {
+    "code": "BRA",
+    "name": "Brazil",
+    "group": "C",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#18c4a3",
+        "#8f7cff",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "CAN",
+    "name": "Canada",
+    "group": "B",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#f8fafc",
+        "#ed4fa3",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "CIV",
+    "name": "Côte d'Ivoire",
+    "group": "E",
+    "aliases": [
+      "Côte d’Ivoire",
+      "Cote dIvoire",
+      "Ivory Coast"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#ffca4f",
+        "#ffca4f"
+      ]
+    }
+  },
+  {
+    "code": "COD",
+    "name": "Congo DR",
+    "group": "K",
+    "aliases": [
+      "Congo DR",
+      "DR Congo",
+      "Democratic Republic of Congo"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#56a6ff",
+        "#47d7bd"
+      ]
+    }
+  },
+  {
+    "code": "COL",
+    "name": "Colombia",
+    "group": "K",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#8f7cff",
+        "#8f7cff"
+      ]
+    }
+  },
+  {
+    "code": "CPV",
+    "name": "Cabo Verde",
+    "group": "H",
+    "aliases": [
+      "Cabo Verde",
+      "Cape Verde"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#ff8a3d",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "CRO",
+    "name": "Croatia",
+    "group": "L",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#56a6ff",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "CUW",
+    "name": "Curaçao",
+    "group": "E",
+    "aliases": [
+      "Curaçao",
+      "Curacao",
+      "Kòrsou",
+      "Korsou"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#ff5a7d",
+        "#ff8a3d"
+      ]
+    }
+  },
+  {
+    "code": "CZE",
+    "name": "Czechia",
+    "group": "A",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#ff5a7d",
+        "#f8fafc"
+      ]
+    }
+  },
+  {
+    "code": "ECU",
+    "name": "Ecuador",
+    "group": "E",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#ff8a3d",
+        "#ff8a3d"
+      ]
+    }
+  },
+  {
+    "code": "EGY",
+    "name": "Egypt",
+    "group": "G",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#f8fafc",
+        "#ffca4f",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "ENG",
+    "name": "England",
+    "group": "L",
+    "aliases": [
+      "England"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#ffca4f",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "ESP",
+    "name": "Spain",
+    "group": "H",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ff8a3d",
+        "#47d7bd",
+        "#f8fafc"
+      ]
+    }
+  },
+  {
+    "code": "FRA",
+    "name": "France",
+    "group": "I",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#f8fafc",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "GER",
+    "name": "Germany",
+    "group": "E",
+    "aliases": [
+      "Germany",
+      "Deutschland"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ed4fa3",
+        "#18c4a3",
+        "#8f7cff"
+      ]
+    }
+  },
+  {
+    "code": "GHA",
+    "name": "Ghana",
+    "group": "L",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#ff8a3d",
+        "#ff8a3d"
+      ]
+    }
+  },
+  {
+    "code": "HAI",
+    "name": "Haiti",
+    "group": "C",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#8f7cff",
+        "#f8fafc"
+      ]
+    }
+  },
+  {
+    "code": "IRN",
+    "name": "IR Iran",
+    "group": "G",
+    "aliases": [
+      "IR Iran",
+      "Iran"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#f8fafc",
+        "#f8fafc",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "IRQ",
+    "name": "Iraq",
+    "group": "I",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#56a6ff",
+        "#ff5a7d",
+        "#ff5a7d"
+      ]
+    }
+  },
+  {
+    "code": "JOR",
+    "name": "Jordan",
+    "group": "J",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#18c4a3",
+        "#8f7cff",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "JPN",
+    "name": "Japan",
+    "group": "F",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#18c4a3",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "KOR",
+    "name": "Korea Republic",
+    "group": "A",
+    "aliases": [
+      "Korea Republic",
+      "South Korea",
+      "Korea"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#ff8a3d",
+        "#47d7bd"
+      ]
+    }
+  },
+  {
+    "code": "KSA",
+    "name": "Saudi Arabia",
+    "group": "H",
+    "aliases": [
+      "Saudi Arabia",
+      "Saudi"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#f8fafc",
+        "#8f7cff",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "MAR",
+    "name": "Morocco",
+    "group": "C",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#d81b60",
+        "#ff5a7d"
+      ]
+    }
+  },
+  {
+    "code": "MEX",
+    "name": "Mexico",
+    "group": "A",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#56a6ff",
+        "#18c4a3",
+        "#18c4a3"
+      ]
+    }
+  },
+  {
+    "code": "NED",
+    "name": "Netherlands",
+    "group": "F",
+    "aliases": [
+      "Netherlands",
+      "Nederland",
+      "Holland"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#56a6ff",
+        "#ff5a7d",
+        "#8f7cff"
+      ]
+    }
+  },
+  {
+    "code": "NOR",
+    "name": "Norway",
+    "group": "I",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#ffca4f",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "NZL",
+    "name": "New Zealand",
+    "group": "G",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#d81b60",
+        "#ed4fa3",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "PAN",
+    "name": "Panama",
+    "group": "L",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#47d7bd",
+        "#d81b60",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "PAR",
+    "name": "Paraguay",
+    "group": "D",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#56a6ff",
+        "#18c4a3",
+        "#ff8a3d"
+      ]
+    }
+  },
+  {
+    "code": "POR",
+    "name": "Portugal",
+    "group": "K",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#18c4a3",
+        "#ff5a7d",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "QAT",
+    "name": "Qatar",
+    "group": "B",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#ed4fa3",
+        "#47d7bd"
+      ]
+    }
+  },
+  {
+    "code": "RSA",
+    "name": "South Africa",
+    "group": "A",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#ffca4f",
+        "#d81b60"
+      ]
+    }
+  },
+  {
+    "code": "SCO",
+    "name": "Scotland",
+    "group": "C",
+    "aliases": [
+      "Scotland"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ed4fa3",
+        "#d81b60",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "SEN",
+    "name": "Senegal",
+    "group": "I",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ed4fa3",
+        "#ff5a7d",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "SUI",
+    "name": "Switzerland",
+    "group": "B",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#ff5a7d",
+        "#ed4fa3"
+      ]
+    }
+  },
+  {
+    "code": "SWE",
+    "name": "Sweden",
+    "group": "F",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#ed4fa3",
+        "#ed4fa3",
+        "#8f7cff"
+      ]
+    }
+  },
+  {
+    "code": "TUN",
+    "name": "Tunisia",
+    "group": "F",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#d81b60",
+        "#ff5a7d"
+      ]
+    }
+  },
+  {
+    "code": "TUR",
+    "name": "Türkiye",
+    "group": "D",
+    "aliases": [
+      "Türkiye",
+      "Turkiye",
+      "Turkey"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ffca4f",
+        "#f8fafc",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "URU",
+    "name": "Uruguay",
+    "group": "H",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#18c4a3",
+        "#ff5a7d",
+        "#56a6ff"
+      ]
+    }
+  },
+  {
+    "code": "USA",
+    "name": "United States",
+    "group": "D",
+    "aliases": [
+      "United States",
+      "US",
+      "USA",
+      "America"
+    ],
+    "flag": {
+      "type": "bands",
+      "orientation": "vertical",
+      "colors": [
+        "#8f7cff",
+        "#47d7bd",
+        "#8f7cff"
+      ]
+    }
+  },
+  {
+    "code": "UZB",
+    "name": "Uzbekistan",
+    "group": "K",
+    "aliases": [],
+    "flag": {
+      "type": "bands",
+      "orientation": "horizontal",
+      "colors": [
+        "#ff5a7d",
+        "#ff8a3d",
+        "#47d7bd"
+      ]
+    }
+  }
+]
