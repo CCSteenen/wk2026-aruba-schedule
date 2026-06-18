@@ -2,5 +2,50 @@
   "external_source": "FIFA official scores/fixtures/results",
   "internal_source": "data/matches.json",
   "last_checked_at": null,
-  "note": "Manual seed data, verification required"
+  "note": "Manual seed data, verification required",
+  "sources": [
+    {
+      "id": "fifa_official_results",
+      "name": "FIFA official fixtures/results page",
+      "role": "external_source_of_truth",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
+      "confidence": "highest",
+      "notes": "Official source for scores, fixtures, result status, and knockout confirmations. This app does not fetch it automatically in this phase."
+    },
+    {
+      "id": "fifa_schedule_pdf",
+      "name": "FIFA official schedule PDF",
+      "role": "baseline_schedule_source",
+      "url": "https://digitalhub.fifa.com/m/1be9ce37eb98fcc5/original/FWC26-Match-Schedule_English.pdf",
+      "confidence": "baseline",
+      "notes": "Baseline schedule reference for fixtures, dates, venues, and match numbering."
+    },
+    {
+      "id": "internal_matches_json",
+      "name": "Internal app match data",
+      "role": "internal_app_source_of_truth",
+      "path": "data/matches.json",
+      "confidence": "controlled",
+      "notes": "The app renders match content from this controlled data file."
+    },
+    {
+      "id": "manual_override_policy",
+      "name": "Manual override policy",
+      "role": "controlled_update_policy",
+      "path": "data/results_override.csv",
+      "confidence": "verified_when_sourced",
+      "notes": "Manual overrides are accepted only when source_name, source_url, and checked_at are supplied and validation passes."
+    }
+  ],
+  "manual_override_policy": {
+    "file": "data/results_override.csv",
+    "required_fields": [
+      "match_no",
+      "source_name",
+      "source_url",
+      "checked_at"
+    ],
+    "completed_requires_score": true,
+    "score_requires_completed_status": true
+  }
 }

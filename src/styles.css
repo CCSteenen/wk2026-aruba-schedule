@@ -358,3 +358,59 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
 
 @media (max-width: 900px) { .commandHero .statGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .matchCard { grid-template-columns: auto 1fr; } .matchCard .status { justify-self: start; } .modalHeader { display: block; } }
 @media (max-width: 640px) { .commandHero .statGrid { grid-template-columns: 1fr; } .teamChip { width: 100%; } }
+
+.freshnessPanel,
+.dataGrid,
+.sourceGrid {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 22px;
+}
+
+.freshnessPanel {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.freshnessPanel div,
+.dataGrid div,
+.sourceGrid article,
+.workflowPanel {
+  border: 1px solid #2b4665;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(16, 33, 54, .96), rgba(13, 24, 40, .92));
+  padding: 16px;
+}
+
+.freshnessPanel strong,
+.dataGrid strong,
+.sourceGrid h3,
+.workflowPanel h3 {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 13px;
+}
+
+.freshnessPanel span,
+.dataGrid span,
+.sourceGrid p,
+.sourceGrid span,
+.workflowPanel li {
+  color: var(--muted);
+}
+
+.dataGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.dataGrid strong { color: var(--green); font-size: clamp(28px, 4vw, 48px); letter-spacing: -.04em; }
+.sourceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sourceGrid a { color: var(--green); font-weight: 900; }
+.workflowPanel { margin-bottom: 16px; }
+.workflowPanel code { color: var(--text); }
+.workflowPanel.accent h3 { color: var(--green); }
+
+@media (max-width: 900px) {
+  .freshnessPanel,
+  .dataGrid,
+  .sourceGrid { grid-template-columns: 1fr; }
+}

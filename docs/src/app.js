@@ -3,14 +3,17 @@ import bracketPaths from '../data/bracket_paths.json' with { type: 'json' };
 import teamIdentity from '../data/team_identity.json' with { type: 'json' };
 import venueLocations from '../data/venue_locations.json' with { type: 'json' };
 import sourceRegistry from '../data/source_registry.json' with { type: 'json' };
+import updateLog from '../data/update_log.json' with { type: 'json' };
+import updateRules from '../data/update_rules.json' with { type: 'json' };
 
 const groups = 'ABCDEFGHIJKL'.split('');
-const navItems = ['overview', 'agenda', 'groups', 'teams', 'venues', 'knockout', 'matches', 'export', 'poster'];
+const navItems = ['overview', 'agenda', 'groups', 'teams', 'venues', 'knockout', 'matches', 'data', 'export', 'poster'];
 const knockoutStages = ['Round of 32', 'Round of 16', 'Quarter-final', 'Semi-final', 'Bronze Final', 'Final'];
 const stages = ['All', 'Group Stage', ...knockoutStages];
 const statuses = ['All', ...[...new Set(matches.map((m) => m.status))].sort()];
 const teamLookup = new Map(teamIdentity.map((t) => [t.code, t]));
-const sourceFreshness = sourceRegistry.last_checked_at || sourceRegistry.note || 'Manual seed data, verification required';
+const latestUpdate = [...(updateLog.runs || [])].sort((a, b) => String(b.ran_at).localeCompare(String(a.ran_at)))[0] || null;
+const sourceFreshness = sourceRegistry.last_checked_at || latestUpdate?.ran_at || sourceRegistry.note || 'Manual seed data, verification required';
 const app = document.querySelector('#app');
 const defaultState = { q: '', stage: 'All', group: 'All', status: 'All', selected: null, selectedTeam: '', selectedVenue: '', copyText: '', copyStatus: '' };
 let state = { view: routeFromHash(), ...defaultState };
@@ -171,6 +174,24 @@ function recentMatches(limit = 6) {
   return matches.filter((m) => ['completed', 'result pending'].includes(getTimelineState(m))).sort((a, b) => parseMatchDateTimeAst(b) - parseMatchDateTimeAst(a)).slice(0, limit);
 }
 
+function dataStats() {
+  const completed = matches.filter((m) => m.status === 'completed').length;
+  const pending = matches.filter((m) => getTimelineState(m) === 'result pending' && m.status !== 'completed').length;
+  const upcoming = matches.filter((m) => ['upcoming', 'live / near-live'].includes(getTimelineState(m))).length;
+  const manualOverrides = (updateLog.runs || []).reduce((sum, run) => sum + (run.applied_count || (run.applied || []).length || 0), 0);
+  return { completed, pending, upcoming, manualOverrides };
+}
+
+function sourceByRole(role) {
+  return (sourceRegistry.sources || []).find((source) => source.role === role) || {};
+}
+
+function freshnessPanel(compact = false) {
+  const external = sourceByRole('external_source_of_truth');
+  const internal = sourceByRole('internal_app_source_of_truth');
+  return `<section class="freshnessPanel ${compact ? 'compactFreshness' : ''}"><div><strong>External truth</strong><span>${esc(external.name || sourceRegistry.external_source)}</span></div><div><strong>Internal truth</strong><span>${esc(internal.path || sourceRegistry.internal_source)}</span></div><div><strong>Last checked</strong><span>${esc(sourceFreshness)}</span></div><div><strong>Official status rule</strong><span>Scores are never inferred from kickoff time.</span></div></section>`;
+}
+
 function topbar() {
   return `<header class="topbar">
     <div><p class="eyebrow">WK 2026 Aruba Schedule</p><h1>World Cup 2026 match command center</h1><p class="lede">All 104 matches, group pools, date agendas, team paths, venues, and knockout spine in Aruba time.</p></div>
@@ -193,12 +214,12 @@ function filters() {
 }
 
 function overview() {
-  const counts = { total: matches.length, upcoming: matches.filter((m) => ['upcoming', 'live / near-live'].includes(getTimelineState(m))).length, completed: matches.filter((m) => m.status === 'completed').length, pending: matches.filter((m) => getTimelineState(m) === 'result pending').length };
+  const counts = { total: matches.length, ...dataStats() };
   const actions = [['Agenda','agenda'],['Groups','groups'],['Teams','teams'],['Venues','venues'],['Knockout','knockout'],['Matches','matches'],['Poster','poster']];
   return `<main class="overviewPage">
     <section class="heroPanel commandHero"><div><p class="eyebrow">Command center</p><h2>WK 2026 Aruba Schedule</h2><p>AST / UTC-4 · Today in Aruba: <strong>${esc(getArubaTodayLabel())}</strong></p><p class="sourceLine">External source: ${esc(sourceRegistry.external_source)} · Internal data: ${esc(sourceRegistry.internal_source)} · ${esc(sourceFreshness)}</p></div>
     <div class="statGrid"><div><strong>${counts.total}</strong><span>total matches</span></div><div><strong>${counts.upcoming}</strong><span>upcoming matches</span></div><div><strong>${counts.completed}</strong><span>completed in data</span></div><div><strong>${counts.pending}</strong><span>result pending</span></div><div><strong>${allVenues().length}</strong><span>venues</span></div><div><strong>${allTeams().length}</strong><span>teams</span></div></div></section>
-    <section class="actionGrid">${actions.map(([label, route]) => `<a class="actionCard" href="#${route}"><strong>${label}</strong><span>Open ${label.toLowerCase()}</span></a>`).join('')}</section>
+    ${freshnessPanel(true)}<section class="actionGrid">${actions.map(([label, route]) => `<a class="actionCard" href="#${route}"><strong>${label}</strong><span>Open ${label.toLowerCase()}</span></a>`).join('')}</section>
     <section class="featureGrid"><div class="featurePanel"><div class="sectionTitle"><h2>Next up</h2><span>from current Aruba time</span></div><div class="featureCards">${nextMatches(8).map((m) => matchCard(m, 'featured')).join('') || '<p class="emptyState">No upcoming matches found.</p>'}</div></div>
     <div class="featurePanel"><div class="sectionTitle accent"><h2>Recently completed / result pending</h2><span>official status + timeline</span></div><div class="featureCards">${recentMatches(8).map((m) => matchCard(m)).join('')}</div></div></section>
   </main>`;
@@ -212,7 +233,7 @@ function agendaSection(title, rows) {
 function agendaPage() {
   const upcoming = matches.filter((m) => ['upcoming', 'live / near-live'].includes(getTimelineState(m))).sort((a, b) => parseMatchDateTimeAst(a) - parseMatchDateTimeAst(b));
   const historical = matches.filter((m) => !['upcoming', 'live / near-live'].includes(getTimelineState(m))).sort((a, b) => parseMatchDateTimeAst(b) - parseMatchDateTimeAst(a));
-  return `<main class="pagePanel"><div class="pageIntro"><h2>Agenda</h2><p>Upcoming first, historical below · Today in Aruba: ${esc(getArubaTodayLabel())}</p></div><div class="agendaList">${agendaSection('Upcoming matches', upcoming)}${agendaSection('Historical matches', historical)}</div></main>`;
+  return `<main class="pagePanel"><div class="pageIntro"><h2>Agenda</h2><p>Upcoming first, historical below · Today in Aruba: ${esc(getArubaTodayLabel())}</p></div>${freshnessPanel(true)}<div class="agendaList">${agendaSection('Upcoming matches', upcoming)}${agendaSection('Historical matches', historical)}</div></main>`;
 }
 
 function groupsPage() {
@@ -298,6 +319,32 @@ function updateMatchesResults() {
   return true;
 }
 
+
+function dataPage() {
+  const stats = dataStats();
+  const external = sourceByRole('external_source_of_truth');
+  const baseline = sourceByRole('baseline_schedule_source');
+  const internal = sourceByRole('internal_app_source_of_truth');
+  const policy = sourceByRole('controlled_update_policy');
+  return `<main class="pagePanel dataPage"><div class="pageIntro"><h2>Data freshness cockpit</h2><p>Source separation, update workflow, and validation rules.</p></div>
+    ${freshnessPanel()}
+    <section class="dataGrid">
+      <div><strong>${stats.completed}</strong><span>completed matches in data</span></div>
+      <div><strong>${stats.pending}</strong><span>result-pending matches</span></div>
+      <div><strong>${stats.upcoming}</strong><span>upcoming matches</span></div>
+      <div><strong>${stats.manualOverrides}</strong><span>manual overrides applied</span></div>
+    </section>
+    <section class="sourceGrid">
+      <article><h3>External source of truth</h3><p>${esc(external.name || sourceRegistry.external_source)}</p><a href="${esc(external.url || '#')}" target="_blank" rel="noreferrer">FIFA official results</a></article>
+      <article><h3>Baseline schedule source</h3><p>${esc(baseline.name || 'FIFA official schedule PDF')}</p><a href="${esc(baseline.url || '#')}" target="_blank" rel="noreferrer">Schedule PDF</a></article>
+      <article><h3>Internal app source of truth</h3><p>${esc(internal.path || sourceRegistry.internal_source)}</p><span>All match cards render from controlled JSON.</span></article>
+      <article><h3>Manual override policy</h3><p>${esc(policy.notes || 'Overrides must be verified and sourced.')}</p><span>${esc(policy.path || 'data/results_override.csv')}</span></article>
+    </section>
+    <section class="workflowPanel"><h3>Update workflow</h3><ol><li>Check FIFA official fixtures/results manually.</li><li>Add verified rows to <code>data/results_override.csv</code>.</li><li>Run <code>npm run update:data</code> to validate and apply.</li><li>Run <code>npm run codex:check</code> so docs preview data stays synced.</li></ol></section>
+    <section class="workflowPanel accent"><h3>Source confidence rules</h3><ul>${(updateRules.rules || []).map((rule) => `<li>${esc(rule)}</li>`).join('')}</ul></section>
+  </main>`;
+}
+
 function exportPage() {
   return `<main class="pagePanel exportPanel"><p class="eyebrow">Export center</p><h2>Static preview and future export handoff</h2><p>This zero-dependency app is ready for GitHub Pages via the generated <code>docs/</code> preview. Browser export actions can be connected in a later phase.</p><div class="exportGrid"><div><strong>Poster route</strong><span><a href="#poster">#poster</a></span></div><div><strong>Pages path</strong><span>/wk2026-aruba-schedule/</span></div><div><strong>Data source</strong><span>data/matches.json</span></div></div></main>`;
 }
@@ -313,7 +360,7 @@ function modal() {
     <header class="modalHeader"><p class="eyebrow">${matchCode(m)} · ${esc(m.stage)}</p><h2>${esc(m.group ? `Group ${m.group}` : m.stage)}</h2><div><span class="status ${esc(m.status)}">${esc(m.status)}</span><span class="status timeline">${esc(getTimelineState(m))}</span></div></header>
     <div class="modalTeams pro"><div class="teamBlock">${flagMarkup(left.code)}<span>${esc(left.code)}</span><strong>${esc(left.name)}</strong></div><div class="scoreBox">${esc(m.status === 'completed' && m.score ? m.score : 'vs')}</div><div class="teamBlock">${flagMarkup(right.code)}<span>${esc(right.code)}</span><strong>${esc(right.name)}</strong></div></div>
     <div class="copyBox proCopy"><button class="copyButton primary" data-copy="${m.match_no}">Copy match summary</button>${state.copyStatus ? `<span>${esc(state.copyStatus)}</span>` : ''}<label>Selectable fallback text<textarea readonly>${esc(state.copyText || summary)}</textarea></label></div>
-    <dl><div><dt>Date</dt><dd>${esc(m.date_ast)}</dd></div><div><dt>Kickoff AST / UTC-4</dt><dd>${esc(m.kickoff_ast)}</dd></div><div><dt>Venue</dt><dd>${esc(m.venue)}</dd></div><div><dt>City</dt><dd>${esc(m.city)}</dd></div><div><dt>Source version</dt><dd>${esc(m.source_version)}</dd></div><div><dt>Status</dt><dd>Official: ${esc(m.status)} · Timeline: ${esc(getTimelineState(m))}</dd></div>${paths.length ? paths.map((p) => `<div><dt>Bracket path</dt><dd>${p.winner_feeds_to ? `Winner feeds to M${p.winner_feeds_to}. ` : ''}${p.loser_feeds_to ? `Loser feeds to M${p.loser_feeds_to}.` : ''}</dd></div>`).join('') : '<div><dt>Bracket path</dt><dd>No downstream bracket path recorded for this match.</dd></div>'}</dl>
+    <dl><div><dt>Date</dt><dd>${esc(m.date_ast)}</dd></div><div><dt>Kickoff AST / UTC-4</dt><dd>${esc(m.kickoff_ast)}</dd></div><div><dt>Venue</dt><dd>${esc(m.venue)}</dd></div><div><dt>City</dt><dd>${esc(m.city)}</dd></div><div><dt>Source version</dt><dd>${esc(m.source_version)}</dd></div><div><dt>Freshness</dt><dd>External: ${esc(sourceRegistry.external_source)} · Last checked: ${esc(sourceFreshness)}</dd></div><div><dt>Status</dt><dd>Official: ${esc(m.status)} · Timeline: ${esc(getTimelineState(m))}</dd></div>${paths.length ? paths.map((p) => `<div><dt>Bracket path</dt><dd>${p.winner_feeds_to ? `Winner feeds to M${p.winner_feeds_to}. ` : ''}${p.loser_feeds_to ? `Loser feeds to M${p.loser_feeds_to}.` : ''}</dd></div>`).join('') : '<div><dt>Bracket path</dt><dd>No downstream bracket path recorded for this match.</dd></div>'}</dl>
   </article></div>`;
 }
 
@@ -324,6 +371,7 @@ function content() {
   if (state.view === 'venues') return venuesPage();
   if (state.view === 'knockout') return knockoutPage();
   if (state.view === 'matches') return matchesPage();
+  if (state.view === 'data') return dataPage();
   if (state.view === 'export') return exportPage();
   if (state.view === 'poster') return posterPage();
   return overview();
