@@ -213,9 +213,24 @@ function filteredMatches() {
   });
 }
 
-function matchesPage() {
+function matchesMarkup() {
   const rows = filteredMatches();
-  return `<main class="pagePanel"><div class="pageIntro"><h2>All matches</h2><p>${rows.length} matches match the current filters.</p></div><div class="matchList">${rows.map((m) => matchCard(m)).join('')}</div></main>`;
+  return `<div class="pageIntro"><h2>All matches</h2><p><span id="matchCount">${rows.length}</span> matches match the current filters.</p></div><div id="matchResults" class="matchList">${rows.map((m) => matchCard(m)).join('')}</div>`;
+}
+
+function matchesPage() {
+  return `<main class="pagePanel">${matchesMarkup()}</main>`;
+}
+
+function updateMatchesResults() {
+  if (state.view !== 'matches') return false;
+  const count = document.querySelector('#matchCount');
+  const results = document.querySelector('#matchResults');
+  if (!count || !results) return false;
+  const rows = filteredMatches();
+  count.textContent = String(rows.length);
+  results.innerHTML = rows.map((m) => matchCard(m)).join('');
+  return true;
 }
 
 function exportPage() {
@@ -223,7 +238,7 @@ function exportPage() {
 }
 
 function posterPage() {
-  return `<main class="posterSheet"><div class="posterHeader"><div><p class="eyebrow">World Cup 2026 Schedule</p><h2>Aruba Time · AST / UTC-4</h2></div><strong>Groups + Knockout</strong></div><div class="posterLayout"><section><div class="sectionTitle"><h2>Group stage - 12 pools</h2><span>A-L</span></div><div class="groupGrid posterGroups">${groups.map((g) => groupCard(g, true)).join('')}</div></section><section><div class="sectionTitle accent"><h2>Knockout stage</h2><span>M73-M104</span></div>${bracket(true)}</section></div></main>`;
+  return `<main class="posterSheet"><nav class="posterEscape" aria-label="Poster navigation"><a href="#overview">Back to overview</a><a href="#matches">Matches</a><a href="#groups">Groups</a></nav><div class="posterHeader"><div><p class="eyebrow">World Cup 2026 Schedule</p><h2>Aruba Time · AST / UTC-4</h2></div><strong>Groups + Knockout</strong></div><div class="posterLayout"><section><div class="sectionTitle"><h2>Group stage - 12 pools</h2><span>A-L</span></div><div class="groupGrid posterGroups">${groups.map((g) => groupCard(g, true)).join('')}</div></section><section><div class="sectionTitle accent"><h2>Knockout stage</h2><span>M73-M104</span></div>${bracket(true)}</section></div></main>`;
 }
 
 function modal() {
@@ -296,12 +311,19 @@ app.addEventListener('click', async (event) => {
   if (event.target.closest('[data-close]')) { state.selected = null; state.copyText = ''; state.copyStatus = ''; render(); }
 });
 
+app.addEventListener('input', (event) => {
+  if (event.target.id === 'search') {
+    state.q = event.target.value;
+    updateMatchesResults();
+  }
+});
+
 app.addEventListener('input', (event) => { if (event.target.id === 'search') { state.q = event.target.value; render(); } });
 app.addEventListener('change', (event) => {
   if (event.target.id === 'stage') state.stage = event.target.value;
   if (event.target.id === 'group') state.group = event.target.value;
   if (event.target.id === 'status') state.status = event.target.value;
-  render();
+  if (!updateMatchesResults()) render();
 });
 
 render();

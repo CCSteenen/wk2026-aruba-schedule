@@ -287,3 +287,42 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
     grid-template-columns: 1fr;
   }
 }
+
+.posterEscape {
+  position: sticky;
+  top: 18px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 18px auto;
+  padding: 8px;
+  border: 1px solid #254261;
+  border-radius: 999px;
+  background: rgba(14, 27, 46, .94);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .28);
+}
+
+.posterEscape a {
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: #06111f;
+  background: linear-gradient(135deg, var(--green), var(--yellow));
+  font-weight: 950;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .posterEscape {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 18px;
+  }
+
+  .posterEscape a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
