@@ -96,11 +96,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#18c4a3",
-        "#8f7cff",
-        "#d81b60"
+        "#009b3a",
+        "#ffdf00",
+        "#002776"
       ]
     }
   },
@@ -219,9 +219,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#d81b60",
-        "#ff5a7d",
-        "#ff8a3d"
+        "#002b7f",
+        "#f9e814",
+        "#002b7f"
       ]
     }
   },
@@ -309,11 +309,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#ffca4f",
-        "#f8fafc",
-        "#d81b60"
+        "#0055a4",
+        "#ffffff",
+        "#ef4135"
       ]
     }
   },
@@ -327,11 +327,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#ed4fa3",
-        "#18c4a3",
-        "#8f7cff"
+        "#000000",
+        "#dd0000",
+        "#ffce00"
       ]
     }
   },
@@ -489,9 +489,9 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#56a6ff",
-        "#18c4a3",
-        "#18c4a3"
+        "#006847",
+        "#ffffff",
+        "#ce1126"
       ]
     }
   },
@@ -506,11 +506,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#56a6ff",
-        "#ff5a7d",
-        "#8f7cff"
+        "#ae1c28",
+        "#ffffff",
+        "#21468b"
       ]
     }
   },
