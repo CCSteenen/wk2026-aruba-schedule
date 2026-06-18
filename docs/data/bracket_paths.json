@@ -1,0 +1,124 @@
+[
+  {
+    "from_match": 74,
+    "winner_feeds_to": 89
+  },
+  {
+    "from_match": 77,
+    "winner_feeds_to": 89
+  },
+  {
+    "from_match": 73,
+    "winner_feeds_to": 90
+  },
+  {
+    "from_match": 75,
+    "winner_feeds_to": 90
+  },
+  {
+    "from_match": 76,
+    "winner_feeds_to": 91
+  },
+  {
+    "from_match": 78,
+    "winner_feeds_to": 91
+  },
+  {
+    "from_match": 79,
+    "winner_feeds_to": 92
+  },
+  {
+    "from_match": 80,
+    "winner_feeds_to": 92
+  },
+  {
+    "from_match": 83,
+    "winner_feeds_to": 93
+  },
+  {
+    "from_match": 84,
+    "winner_feeds_to": 93
+  },
+  {
+    "from_match": 81,
+    "winner_feeds_to": 94
+  },
+  {
+    "from_match": 82,
+    "winner_feeds_to": 94
+  },
+  {
+    "from_match": 86,
+    "winner_feeds_to": 95
+  },
+  {
+    "from_match": 88,
+    "winner_feeds_to": 95
+  },
+  {
+    "from_match": 85,
+    "winner_feeds_to": 96
+  },
+  {
+    "from_match": 87,
+    "winner_feeds_to": 96
+  },
+  {
+    "from_match": 89,
+    "winner_feeds_to": 97
+  },
+  {
+    "from_match": 90,
+    "winner_feeds_to": 97
+  },
+  {
+    "from_match": 93,
+    "winner_feeds_to": 98
+  },
+  {
+    "from_match": 94,
+    "winner_feeds_to": 98
+  },
+  {
+    "from_match": 91,
+    "winner_feeds_to": 99
+  },
+  {
+    "from_match": 92,
+    "winner_feeds_to": 99
+  },
+  {
+    "from_match": 95,
+    "winner_feeds_to": 100
+  },
+  {
+    "from_match": 96,
+    "winner_feeds_to": 100
+  },
+  {
+    "from_match": 97,
+    "winner_feeds_to": 101
+  },
+  {
+    "from_match": 98,
+    "winner_feeds_to": 101
+  },
+  {
+    "from_match": 99,
+    "winner_feeds_to": 102
+  },
+  {
+    "from_match": 100,
+    "winner_feeds_to": 102
+  },
+  {
+    "from_match": 101,
+    "winner_feeds_to": 104,
+    "loser_feeds_to": 103
+  },
+  {
+    "from_match": 102,
+    "winner_feeds_to": 104,
+    "loser_feeds_to": 103
+  }
+]
