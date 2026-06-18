@@ -318,6 +318,7 @@ app.addEventListener('input', (event) => {
   }
 });
 
+app.addEventListener('input', (event) => { if (event.target.id === 'search') { state.q = event.target.value; render(); } });
 app.addEventListener('change', (event) => {
   if (event.target.id === 'stage') state.stage = event.target.value;
   if (event.target.id === 'group') state.group = event.target.value;
