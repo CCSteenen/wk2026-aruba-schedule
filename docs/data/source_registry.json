@@ -1,0 +1,6 @@
+{
+  "external_source": "FIFA official scores/fixtures/results",
+  "internal_source": "data/matches.json",
+  "last_checked_at": null,
+  "note": "Manual seed data, verification required"
+}

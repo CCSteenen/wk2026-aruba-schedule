@@ -326,3 +326,35 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
     text-align: center;
   }
 }
+
+.flag { display: inline-block; width: 26px; height: 18px; flex: 0 0 auto; border: 1px solid rgba(248,250,252,.55); border-radius: 5px; background: var(--flag, linear-gradient(180deg, #f8fafc, #18c4a3, #56a6ff)); box-shadow: inset 0 0 0 1px rgba(0,0,0,.16), 0 4px 12px rgba(0,0,0,.2); vertical-align: middle; }
+.flagTbd { background: repeating-linear-gradient(45deg, #263c56 0 6px, #101d31 6px 12px); }
+.teamChip { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
+.teamChip .code { flex: 0 0 auto; }
+.matchTeams { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.scoreInline { color: var(--yellow); font-weight: 950; }
+.matchCard { grid-template-columns: auto auto 1fr auto; }
+.matchCard .timeline { justify-self: start; background: #1b3552; color: var(--text); border: 1px solid #36516e; }
+.status.result-pending { background: var(--orange); color: #06111f; }
+.status.upcoming, .status.scheduled { background: var(--blue); }
+.status.live--near-live { background: var(--pink); color: #fff; }
+.commandHero .statGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sourceLine { font-size: 14px !important; color: #cbd7e5 !important; }
+.actionGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 0 0 26px; }
+.actionCard { border: 1px solid #2b4665; border-radius: 20px; padding: 18px; background: linear-gradient(145deg, #102136, #0d1828); text-decoration: none; transition: .15s ease; }
+.actionCard:hover { border-color: var(--green); transform: translateY(-1px); }
+.actionCard strong { display: block; color: var(--yellow); font-size: 20px; }
+.actionCard span { color: var(--muted); }
+.agendaBlock { display: grid; gap: 14px; }
+.teamCard > .flag { width: 34px; height: 23px; }
+.modalHeader { display: flex; justify-content: space-between; gap: 18px; align-items: start; padding-right: 42px; border-bottom: 1px solid #22364f; margin-bottom: 18px; }
+.modalHeader h2 { margin-bottom: 12px; }
+.modalTeams.pro .teamBlock { align-content: center; justify-items: center; text-align: center; }
+.modalTeams.pro .teamBlock .flag { width: 58px; height: 38px; border-radius: 9px; }
+.copyButton.primary { border: 0; border-radius: 14px; padding: 14px 18px; font-size: 15px; box-shadow: 0 12px 28px rgba(24,196,163,.24); }
+.proCopy label { grid-column: 1 / -1; display: grid; gap: 8px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 900; }
+.proCopy label textarea { text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 14px; }
+.venueCard small::after { content: ''; }
+
+@media (max-width: 900px) { .commandHero .statGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .matchCard { grid-template-columns: auto 1fr; } .matchCard .status { justify-self: start; } .modalHeader { display: block; } }
+@media (max-width: 640px) { .commandHero .statGrid { grid-template-columns: 1fr; } .teamChip { width: 100%; } }
