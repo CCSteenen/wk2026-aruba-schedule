@@ -327,8 +327,9 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
   }
 }
 
-.flag { display: inline-block; width: 26px; height: 18px; flex: 0 0 auto; border: 1px solid rgba(248,250,252,.55); border-radius: 5px; background: var(--flag, linear-gradient(180deg, #f8fafc, #18c4a3, #56a6ff)); box-shadow: inset 0 0 0 1px rgba(0,0,0,.16), 0 4px 12px rgba(0,0,0,.2); vertical-align: middle; }
-.flagTbd { background: repeating-linear-gradient(45deg, #263c56 0 6px, #101d31 6px 12px); }
+.flag { display: inline-block; width: 26px; height: 18px; flex: 0 0 auto; overflow: hidden; border: 1px solid rgba(248,250,252,.62); border-radius: 5px; background: #101d31; box-shadow: inset 0 0 0 1px rgba(0,0,0,.16), 0 4px 12px rgba(0,0,0,.2); vertical-align: middle; }
+.flag svg { display: block; width: 100%; height: 100%; }
+.flagTbd { background: #101d31; border-style: dashed; }
 .teamChip { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
 .teamChip .code { flex: 0 0 auto; }
 .matchTeams { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
@@ -336,8 +337,9 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
 .matchCard { grid-template-columns: auto auto 1fr auto; }
 .matchCard .timeline { justify-self: start; background: #1b3552; color: var(--text); border: 1px solid #36516e; }
 .status.result-pending { background: var(--orange); color: #06111f; }
-.status.upcoming, .status.scheduled { background: var(--blue); }
-.status.live--near-live { background: var(--pink); color: #fff; }
+.status.upcoming { background: var(--blue); }
+.status.live-near-live { background: var(--pink); color: #fff; }
+.status.completed { background: var(--green); }
 .commandHero .statGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .sourceLine { font-size: 14px !important; color: #cbd7e5 !important; }
 .actionGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 0 0 26px; }
@@ -352,9 +354,71 @@ dl { display: grid; gap: 12px; } dl div { display: grid; grid-template-columns: 
 .modalTeams.pro .teamBlock { align-content: center; justify-items: center; text-align: center; }
 .modalTeams.pro .teamBlock .flag { width: 58px; height: 38px; border-radius: 9px; }
 .copyButton.primary { border: 0; border-radius: 14px; padding: 14px 18px; font-size: 15px; box-shadow: 0 12px 28px rgba(24,196,163,.24); }
+.secondaryButton { color: var(--text); background: #101d31; border-color: #36516e; box-shadow: none; }
+.secondaryButton:hover { border-color: var(--green); }
+.agendaHistoryControl { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 4px 0 18px; color: var(--muted); }
+.inlinePill { display: inline-block; margin-right: 10px; padding: 6px 10px; font-size: 12px; }
+.modalTeams .scoreBox { cursor: default; user-select: text; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
+.proCopy textarea[readonly] { cursor: text; box-shadow: inset 0 0 0 1px rgba(86,166,255,.18); }
 .proCopy label { grid-column: 1 / -1; display: grid; gap: 8px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 900; }
 .proCopy label textarea { text-transform: none; letter-spacing: normal; font-weight: 400; font-size: 14px; }
 .venueCard small::after { content: ''; }
 
 @media (max-width: 900px) { .commandHero .statGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .matchCard { grid-template-columns: auto 1fr; } .matchCard .status { justify-self: start; } .modalHeader { display: block; } }
 @media (max-width: 640px) { .commandHero .statGrid { grid-template-columns: 1fr; } .teamChip { width: 100%; } }
+
+.freshnessPanel,
+.dataGrid,
+.sourceGrid {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 22px;
+}
+
+.freshnessPanel {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.freshnessPanel div,
+.dataGrid div,
+.sourceGrid article,
+.workflowPanel {
+  border: 1px solid #2b4665;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(16, 33, 54, .96), rgba(13, 24, 40, .92));
+  padding: 16px;
+}
+
+.freshnessPanel strong,
+.dataGrid strong,
+.sourceGrid h3,
+.workflowPanel h3 {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 13px;
+}
+
+.freshnessPanel span,
+.dataGrid span,
+.sourceGrid p,
+.sourceGrid span,
+.workflowPanel li {
+  color: var(--muted);
+}
+
+.dataGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.dataGrid strong { color: var(--green); font-size: clamp(28px, 4vw, 48px); letter-spacing: -.04em; }
+.sourceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sourceGrid a { color: var(--green); font-weight: 900; }
+.workflowPanel { margin-bottom: 16px; }
+.workflowPanel code { color: var(--text); }
+.workflowPanel.accent h3 { color: var(--green); }
+
+@media (max-width: 900px) {
+  .freshnessPanel,
+  .dataGrid,
+  .sourceGrid { grid-template-columns: 1fr; }
+}

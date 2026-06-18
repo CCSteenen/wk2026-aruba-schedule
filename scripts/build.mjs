@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const staticFiles = ['index.html'];
 const sourceFiles = ['src/app.js', 'src/styles.css'];
-const dataFiles = ['data/matches.json', 'data/bracket_paths.json', 'data/team_identity.json', 'data/venue_locations.json', 'data/source_registry.json', 'data/source_log.json'];
+const dataFiles = ['data/matches.json', 'data/bracket_paths.json', 'data/team_identity.json', 'data/venue_locations.json', 'data/source_registry.json', 'data/source_log.json', 'data/results_override.csv', 'data/update_log.json', 'data/update_rules.json'];
 
 async function copyInto(outDir, file) {
   await fs.mkdir(path.join(outDir, path.dirname(file)), { recursive: true });

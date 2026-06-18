@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "rules": [
+    "Never infer scores from kickoff time.",
+    "If kickoff passed and no score exists, show result pending.",
+    "Only official or manually verified scores can mark completed.",
+    "Knockout confirmations require official source.",
+    "Manual override must include source_name, source_url, and checked_at."
+  ],
+  "validation": {
+    "score_requires_status": "completed",
+    "completed_requires_score": true,
+    "required_manual_override_fields": ["match_no", "source_name", "source_url", "checked_at"],
+    "unknown_match_no": "fail"
+  }
+}
