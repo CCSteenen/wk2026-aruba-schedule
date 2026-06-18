@@ -8,9 +8,9 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#ed4fa3",
-        "#f8fafc",
-        "#d81b60"
+        "#006233",
+        "#ffffff",
+        "#d21034"
       ]
     }
   },
@@ -21,11 +21,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#56a6ff",
-        "#18c4a3",
-        "#ed4fa3"
+        "#74acdf",
+        "#ffffff",
+        "#74acdf"
       ]
     }
   },
@@ -35,13 +35,18 @@
     "group": "D",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "vertical",
+      "type": "canton",
+      "orientation": "horizontal",
       "colors": [
-        "#ff8a3d",
-        "#56a6ff",
-        "#47d7bd"
-      ]
+        "#012169",
+        "#012169",
+        "#012169"
+      ],
+      "canton": {
+        "color": "#c8102e",
+        "width": 38,
+        "height": 28
+      }
     }
   },
   {
@@ -51,11 +56,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#ff8a3d",
-        "#d81b60",
-        "#18c4a3"
+        "#ed2939",
+        "#ffffff",
+        "#ed2939"
       ]
     }
   },
@@ -66,11 +71,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#d81b60",
-        "#8f7cff",
-        "#ffca4f"
+        "#000000",
+        "#ffd90c",
+        "#ef3340"
       ]
     }
   },
@@ -83,9 +88,9 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#8f7cff",
-        "#18c4a3",
-        "#f8fafc"
+        "#002f6c",
+        "#f7d117",
+        "#002f6c"
       ]
     }
   },
@@ -96,11 +101,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#18c4a3",
-        "#8f7cff",
-        "#d81b60"
+        "#009b3a",
+        "#ffdf00",
+        "#002776"
       ]
     }
   },
@@ -111,11 +116,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#f8fafc",
-        "#ed4fa3",
-        "#18c4a3"
+        "#d52b1e",
+        "#ffffff",
+        "#d52b1e"
       ]
     }
   },
@@ -130,11 +135,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#47d7bd",
-        "#ffca4f",
-        "#ffca4f"
+        "#f77f00",
+        "#ffffff",
+        "#009e60"
       ]
     }
   },
@@ -149,11 +154,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#d81b60",
-        "#56a6ff",
-        "#47d7bd"
+        "#007fff",
+        "#f7d618",
+        "#ce1021"
       ]
     }
   },
@@ -166,9 +171,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#ffca4f",
-        "#8f7cff",
-        "#8f7cff"
+        "#fcd116",
+        "#003893",
+        "#ce1126"
       ]
     }
   },
@@ -184,9 +189,11 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#47d7bd",
-        "#ff8a3d",
-        "#d81b60"
+        "#003893",
+        "#ffffff",
+        "#cf2027",
+        "#f7d116",
+        "#003893"
       ]
     }
   },
@@ -199,9 +206,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#d81b60",
-        "#56a6ff",
-        "#18c4a3"
+        "#ff0000",
+        "#ffffff",
+        "#171796"
       ]
     }
   },
@@ -219,9 +226,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#d81b60",
-        "#ff5a7d",
-        "#ff8a3d"
+        "#002b7f",
+        "#f9e814",
+        "#002b7f"
       ]
     }
   },
@@ -232,11 +239,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#8f7cff",
-        "#ff5a7d",
-        "#f8fafc"
+        "#ffffff",
+        "#d7141a",
+        "#11457e"
       ]
     }
   },
@@ -247,11 +254,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#8f7cff",
-        "#ff8a3d",
-        "#ff8a3d"
+        "#ffdd00",
+        "#034ea2",
+        "#ed1c24"
       ]
     }
   },
@@ -264,9 +271,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#f8fafc",
-        "#ffca4f",
-        "#ed4fa3"
+        "#ce1126",
+        "#ffffff",
+        "#000000"
       ]
     }
   },
@@ -278,13 +285,9 @@
       "England"
     ],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#d81b60",
-        "#ffca4f",
-        "#18c4a3"
-      ]
+      "type": "cross",
+      "base": "#ffffff",
+      "cross": "#cf142b"
     }
   },
   {
@@ -294,11 +297,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#ff8a3d",
-        "#47d7bd",
-        "#f8fafc"
+        "#aa151b",
+        "#f1bf00",
+        "#aa151b"
       ]
     }
   },
@@ -309,11 +312,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#ffca4f",
-        "#f8fafc",
-        "#d81b60"
+        "#0055a4",
+        "#ffffff",
+        "#ef4135"
       ]
     }
   },
@@ -327,11 +330,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#ed4fa3",
-        "#18c4a3",
-        "#8f7cff"
+        "#000000",
+        "#dd0000",
+        "#ffce00"
       ]
     }
   },
@@ -344,9 +347,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#47d7bd",
-        "#ff8a3d",
-        "#ff8a3d"
+        "#ce1126",
+        "#fcd116",
+        "#006b3f"
       ]
     }
   },
@@ -359,9 +362,8 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#ffca4f",
-        "#8f7cff",
-        "#f8fafc"
+        "#00209f",
+        "#d21034"
       ]
     }
   },
@@ -377,9 +379,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#f8fafc",
-        "#f8fafc",
-        "#56a6ff"
+        "#239f40",
+        "#ffffff",
+        "#da0000"
       ]
     }
   },
@@ -390,11 +392,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#56a6ff",
-        "#ff5a7d",
-        "#ff5a7d"
+        "#ce1126",
+        "#ffffff",
+        "#000000"
       ]
     }
   },
@@ -405,11 +407,12 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#18c4a3",
-        "#8f7cff",
-        "#18c4a3"
+        "#000000",
+        "#ffffff",
+        "#007a3d",
+        "#ce1126"
       ]
     }
   },
@@ -419,13 +422,9 @@
     "group": "F",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#47d7bd",
-        "#18c4a3",
-        "#18c4a3"
-      ]
+      "type": "disc",
+      "base": "#ffffff",
+      "disc": "#bc002d"
     }
   },
   {
@@ -438,12 +437,12 @@
       "Korea"
     ],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
+      "type": "disc",
+      "base": "#ffffff",
+      "splitDisc": true,
       "colors": [
-        "#ffca4f",
-        "#ff8a3d",
-        "#47d7bd"
+        "#c60c30",
+        "#003478"
       ]
     }
   },
@@ -459,9 +458,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#f8fafc",
-        "#8f7cff",
-        "#56a6ff"
+        "#006c35",
+        "#ffffff",
+        "#006c35"
       ]
     }
   },
@@ -471,13 +470,9 @@
     "group": "C",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#47d7bd",
-        "#d81b60",
-        "#ff5a7d"
-      ]
+      "type": "disc",
+      "base": "#c1272d",
+      "disc": "#006233"
     }
   },
   {
@@ -489,9 +484,9 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#56a6ff",
-        "#18c4a3",
-        "#18c4a3"
+        "#006847",
+        "#ffffff",
+        "#ce1126"
       ]
     }
   },
@@ -506,11 +501,11 @@
     ],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#56a6ff",
-        "#ff5a7d",
-        "#8f7cff"
+        "#ae1c28",
+        "#ffffff",
+        "#21468b"
       ]
     }
   },
@@ -520,13 +515,10 @@
     "group": "I",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "vertical",
-      "colors": [
-        "#8f7cff",
-        "#ffca4f",
-        "#ed4fa3"
-      ]
+      "type": "cross",
+      "base": "#ba0c2f",
+      "cross": "#ffffff",
+      "innerCross": "#00205b"
     }
   },
   {
@@ -535,13 +527,18 @@
     "group": "G",
     "aliases": [],
     "flag": {
-      "type": "bands",
+      "type": "canton",
       "orientation": "horizontal",
       "colors": [
-        "#d81b60",
-        "#ed4fa3",
-        "#56a6ff"
-      ]
+        "#00247d",
+        "#00247d",
+        "#00247d"
+      ],
+      "canton": {
+        "color": "#cc142b",
+        "width": 34,
+        "height": 26
+      }
     }
   },
   {
@@ -550,12 +547,36 @@
     "group": "L",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#47d7bd",
-        "#d81b60",
-        "#ed4fa3"
+      "type": "blocks",
+      "blocks": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 50,
+          "height": 32,
+          "color": "#ffffff"
+        },
+        {
+          "x": 50,
+          "y": 0,
+          "width": 50,
+          "height": 32,
+          "color": "#d21034"
+        },
+        {
+          "x": 0,
+          "y": 32,
+          "width": 50,
+          "height": 32,
+          "color": "#005293"
+        },
+        {
+          "x": 50,
+          "y": 32,
+          "width": 50,
+          "height": 32,
+          "color": "#ffffff"
+        }
       ]
     }
   },
@@ -566,11 +587,11 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#56a6ff",
-        "#18c4a3",
-        "#ff8a3d"
+        "#d52b1e",
+        "#ffffff",
+        "#0038a8"
       ]
     }
   },
@@ -583,9 +604,8 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#18c4a3",
-        "#ff5a7d",
-        "#d81b60"
+        "#006600",
+        "#ff0000"
       ]
     }
   },
@@ -596,11 +616,10 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "horizontal",
+      "orientation": "vertical",
       "colors": [
-        "#ffca4f",
-        "#ed4fa3",
-        "#47d7bd"
+        "#ffffff",
+        "#8a1538"
       ]
     }
   },
@@ -611,11 +630,13 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#8f7cff",
-        "#ffca4f",
-        "#d81b60"
+        "#de3831",
+        "#ffffff",
+        "#007a4d",
+        "#002395",
+        "#ffb612"
       ]
     }
   },
@@ -627,13 +648,9 @@
       "Scotland"
     ],
     "flag": {
-      "type": "bands",
-      "orientation": "vertical",
-      "colors": [
-        "#ed4fa3",
-        "#d81b60",
-        "#ed4fa3"
-      ]
+      "type": "cross",
+      "base": "#005eb8",
+      "diagonal": "#ffffff"
     }
   },
   {
@@ -645,9 +662,9 @@
       "type": "bands",
       "orientation": "vertical",
       "colors": [
-        "#ed4fa3",
-        "#ff5a7d",
-        "#56a6ff"
+        "#00853f",
+        "#fdef42",
+        "#e31b23"
       ]
     }
   },
@@ -657,13 +674,9 @@
     "group": "B",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#ffca4f",
-        "#ff5a7d",
-        "#ed4fa3"
-      ]
+      "type": "cross",
+      "base": "#d52b1e",
+      "cross": "#ffffff"
     }
   },
   {
@@ -672,13 +685,9 @@
     "group": "F",
     "aliases": [],
     "flag": {
-      "type": "bands",
-      "orientation": "vertical",
-      "colors": [
-        "#ed4fa3",
-        "#ed4fa3",
-        "#8f7cff"
-      ]
+      "type": "cross",
+      "base": "#006aa7",
+      "cross": "#fecc00"
     }
   },
   {
@@ -690,9 +699,9 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#ffca4f",
-        "#d81b60",
-        "#ff5a7d"
+        "#e70013",
+        "#ffffff",
+        "#e70013"
       ]
     }
   },
@@ -706,13 +715,9 @@
       "Turkey"
     ],
     "flag": {
-      "type": "bands",
-      "orientation": "horizontal",
-      "colors": [
-        "#ffca4f",
-        "#f8fafc",
-        "#56a6ff"
-      ]
+      "type": "disc",
+      "base": "#e30a17",
+      "disc": "#ffffff"
     }
   },
   {
@@ -722,11 +727,13 @@
     "aliases": [],
     "flag": {
       "type": "bands",
-      "orientation": "vertical",
+      "orientation": "horizontal",
       "colors": [
-        "#18c4a3",
-        "#ff5a7d",
-        "#56a6ff"
+        "#ffffff",
+        "#0038a8",
+        "#ffffff",
+        "#0038a8",
+        "#ffffff"
       ]
     }
   },
@@ -741,13 +748,22 @@
       "America"
     ],
     "flag": {
-      "type": "bands",
-      "orientation": "vertical",
+      "type": "canton",
+      "orientation": "horizontal",
       "colors": [
-        "#8f7cff",
-        "#47d7bd",
-        "#8f7cff"
-      ]
+        "#b22234",
+        "#ffffff",
+        "#b22234",
+        "#ffffff",
+        "#b22234",
+        "#ffffff",
+        "#b22234"
+      ],
+      "canton": {
+        "color": "#3c3b6e",
+        "width": 42,
+        "height": 34
+      }
     }
   },
   {
@@ -759,9 +775,11 @@
       "type": "bands",
       "orientation": "horizontal",
       "colors": [
-        "#ff5a7d",
-        "#ff8a3d",
-        "#47d7bd"
+        "#1eb5e5",
+        "#ce1126",
+        "#ffffff",
+        "#ce1126",
+        "#009b3a"
       ]
     }
   }
